@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff8f3;
+    color: #4e2926;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 8%;
+}
+
+header h2 {
+    color: #de668c;
+    font-size: 26px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color:#4e2926;
+}
+
+nav a {
+    text-decoration: none;
+    color:#4e2926;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #de668c;
+    transition: 0.3s;
+}
+
+#inicio {
+    min-height: 80vh;
+    display:flex;
+    align-items: center;
+    padding: 60px 8%;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 8%;
+}
+
+.inicio-texto {
+    max-width: 600px;;
+}
+
+.inicio-texto h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.inicio-texto h1 span {
+    color: #de668c;
+}
+
+.inicio-texto p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background-color:#de668c;
+    color: white;
+
+    padding: 12px 25px;
+    border-radius:25px;
+
+    text-decoration:none;
+    font-weight: 600;
+
+    transition: 0.3;
+}
+
+.botao:hover {
+    background: color #f5afc1;
+}
+
+.inicio-imagem {
+    width: 450px;
+}
+
+.inicio-imagem img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px #00000020
+}
+
+#cardapio {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: white;
+}
+
+#cardapio h2 {
+    font-size: 36px;
+    color:#de668c;
+    margin-bottom:10px;
+}
+
+#cardapio p {
+    margin-bottom: 40px;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.produto {
+    width: 300px;
+    background-color: #fff8f3;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 20px;
+}
+
+.produto-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.produto-info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.produto-info strong {
+    color:#de668c;
+    font-size: 18px;
+}
+
+.produto {
+    width: 300px;
+    background-color: #fff8f3;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000015;
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}

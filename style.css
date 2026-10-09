@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -139,6 +143,9 @@ nav a:hover {
 
 .produto-info {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .produto-info h3 {
@@ -154,9 +161,12 @@ nav a:hover {
 .produto-info strong {
     color:#de668c;
     font-size: 18px;
+    margin-top:auto;
 }
 
 .produto {
+    display: flex;
+    flex-direction: column;
     width: 300px;
     background-color: #fff8f3;
     border-radius: 20px;
@@ -167,4 +177,214 @@ nav a:hover {
 
 .produto:hover {
     transform: translateY(-5px);
+}
+
+#sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 8%;
+}
+
+.sobre-imagem {
+    width: 350px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.sobre-texto {
+    max-width: 500px;
+}
+
+.sobre-texto h2 {
+    font-size: 36px;
+    color:#de668c;
+    margin-bottom:20px;
+}
+
+.sobre-texto p {
+    line-height: 1.7;
+}
+
+.diferenciais {
+    margin-top: 25px;
+}
+
+.diferenciais p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.diferenciais span {
+    color:#de668c;
+    font-size:24px;
+}
+
+#contato {
+    background-color: #f9dce6;
+    text-align: center;
+    padding: 80px 8%;
+}
+
+#contato h2 {
+    font-size: 36px;
+    color: #4e2926;
+    margin-bottom: 15px;
+}
+
+#contato p {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+}
+
+.botao-contato {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #de668c;
+    color: white;
+
+    padding: 14px 28px;
+    border-radius: 30px;
+
+    text-decoration:none;
+    font-weight: 600;
+
+    transition: 0.3;
+}
+
+.botao-contato:hover {
+    background-color: #c94d76
+}
+
+footer {
+    background-color:#4e2926;
+    color: white;
+    padding: 40px 8% 20px;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.footer-conteudo h2 {
+    color: #f5afc1;
+    font-size: 26px;
+}
+
+.footer-conteudo p {
+    font-size: 14px;
+}
+
+.footer-conteudo span {
+    color:#f5afc1;
+    font-size: 40px;
+}
+
+.copyrhight {
+    border-top: 1px solid #80615f;
+    padding-top:20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.contato-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: coilumn;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    #inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%
+    }
+
+    .inicio-texto h1 {
+        font-size: 34px;
+    }
+
+    .inicio-imagem {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 100%;
+        max-width: 350px; 
+    }
+
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .diferenciais p {
+        justify-content: center;
+    }
+
+    .contato-botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cardapio h2,
+    #contato h2,
+    .sobre-texto h2 {
+        font-size: 30px;
+    }
+
+
 }

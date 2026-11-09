@@ -388,3 +388,110 @@ footer {
 
 
 }
+
+
+/* LOGO DO CABEÇALHO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+/* BOTÃO HAMBÚRGUER */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background-color: #de668c;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* MENU RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 15px 6%;
+        z-index: 100;
+    }
+
+    .logo img {
+        width: 85px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff8f3;
+        box-shadow: 0 10px 20px #00000015;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    header nav.ativo {
+        display: flex;
+    }
+
+    header nav a {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    /* TRANSFORMA OS TRÊS TRAÇOS EM X */
+
+    .menu-toggle.ativo span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.ativo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.ativo span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+/* LOGO REDONDA */
+
+header .logo img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -11,9 +11,7 @@
 
     <!-- Fonte Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Ícones -->
@@ -23,15 +21,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
     <!-- CABEÇALHO -->
     <header>
 
-        <h2>Sweet Dream</h2>
+        <a href="#inicio" class="logo">
+            <img src="img/logo.png" alt="Sweet Dream">
+        </a>
 
-        <nav>
+        <!-- Botão do menu para celulares -->
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <nav id="menu">
             <a href="#inicio">Início</a>
             <a href="#cardapio">Cardápio</a>
             <a href="#sobre">Sobre</a>
@@ -40,10 +54,8 @@
 
     </header>
 
-
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-
 
         <!-- INÍCIO -->
         <section id="inicio">
@@ -66,15 +78,11 @@
 
             </div>
 
-
             <div class="inicio-imagem">
-
                 <img src="img/doce.png" alt="Doce da Sweet Dream">
-
             </div>
 
         </section>
-
 
         <!-- CARDÁPIO -->
         <section id="cardapio">
@@ -83,10 +91,8 @@
 
             <p>Conheça alguns dos sabores da Sweet Dream.</p>
 
-
             <!-- ÁREA DOS PRODUTOS -->
             <div class="produtos">
-
 
                 <!-- PRODUTO 1 -->
                 <div class="produto">
@@ -97,15 +103,15 @@
 
                         <h3>Tortinha de Limão</h3>
 
-                        <p>Cremosa, leve e 
-                            irresistível.</p>
-                        
+                        <p>
+                            Cremosa, leve e irresistível.
+                        </p>
+
                         <strong>R$ 10,00</strong>
 
                     </div>
 
                 </div>
-
 
                 <!-- PRODUTO 2 -->
                 <div class="produto">
@@ -127,7 +133,6 @@
 
                 </div>
 
-
                 <!-- PRODUTO 3 -->
                 <div class="produto">
 
@@ -148,17 +153,14 @@
 
                 </div>
 
-
             </div>
 
         </section>
-
 
         <!-- SOBRE -->
         <section id="sobre">
 
             <div class="sobre-imagem">
-
                 <img src="img/logo.png" alt="Logo da Sweet Dream">
             </div>
 
@@ -170,19 +172,18 @@
                     A Sweet Dream nasceu da vontade de transformar
                     receitas feitas com carinho em momentos especiais.
                     Nosso objetivo é oferecer doces e salgados que
-                    tornem cada momento ainda mais gostoso. 
+                    tornem cada momento ainda mais gostoso.
                 </p>
 
                 <div class="diferenciais">
 
                     <p>
-
-                        <span class = "material-symbols-rounded"> favorite</span>
+                        <span class="material-symbols-rounded">favorite</span>
                         Feito com carinho
                     </p>
 
                     <p>
-                        <span class = "material-symbols-rounded">verified</span>
+                        <span class="material-symbols-rounded">verified</span>
                         Ingredientes selecionados
                     </p>
 
@@ -190,14 +191,12 @@
 
             </div>
 
-
         </section>
 
+        <!-- CONTATO -->
         <section id="contato">
 
-            <h2>
-                Entre em contato
-            </h2>
+            <h2>Entre em contato</h2>
 
             <p>
                 Gostou das nossas delícias?
@@ -208,50 +207,97 @@
             <div class="contato-botoes">
 
                 <a href="https://www.instagram.com/sweetdream_mga/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao-contato">
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="botao-contato">
 
-                    <span class="material-symbols-rounded"photo_camera>photo_camera</span>
+                    <span class="material-symbols-rounded">photo_camera</span>
                     Instagram
-                
+
                 </a>
 
                 <a href="https://wa.me/5544988046549"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="botao-contato whatsapp">
-                
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="botao-contato whatsapp">
+
                     <span class="material-symbols-rounded">chat</span>
                     WhatsApp
 
                 </a>
 
+            </div>
 
         </section>
 
-
     </main>
+
     <!-- RODAPÉ -->
-     <footer>
+    <footer>
 
         <div class="footer-conteudo">
 
             <div>
                 <h2>Sweet Dream</h2>
-                <P>Sabores que encantam.</P>
+                <p>Sabores que encantam.</p>
             </div>
 
             <span class="material-symbols-rounded">cake</span>
 
         </div>
 
-        <p class="copyrigth">
+        <p class="copyright">
             &copy; 2026 Sweet Dream. Todos os direitos reservados.
         </p>
 
+    </footer>
 
-     </footer>
+    <!-- JAVASCRIPT DO MENU MOBILE -->
+    <script>
+
+        const botaoMenu = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        function fecharMenu() {
+            botaoMenu.classList.remove("ativo");
+            menu.classList.remove("ativo");
+
+            botaoMenu.setAttribute("aria-expanded", "false");
+            botaoMenu.setAttribute("aria-label", "Abrir menu");
+        }
+
+        botaoMenu.addEventListener("click", function() {
+
+            botaoMenu.classList.toggle("ativo");
+            menu.classList.toggle("ativo");
+
+            const aberto = menu.classList.contains("ativo");
+
+            botaoMenu.setAttribute("aria-expanded", String(aberto));
+            botaoMenu.setAttribute(
+                "aria-label",
+                aberto ? "Fechar menu" : "Abrir menu"
+            );
+
+        });
+
+        const linksMenu = menu.querySelectorAll("a");
+
+        linksMenu.forEach(function(link) {
+
+            link.addEventListener("click", fecharMenu);
+
+        });
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                fecharMenu();
+            }
+
+        });
+
+    </script>
 
 </body>
 
